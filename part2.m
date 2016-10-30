@@ -99,25 +99,28 @@ end
 H3_quotient = H3 ./ 1000000;
 %% Graphs
 figure 
+hold on
 plot(0:100, H1_quotient, 'x')
 title('Uniform RV')
 xlabel('x')
 ylabel('pdf(x)')
+line([RV1_mean RV1_mean],[0 max(H1_quotient)])
 
 figure 
-%hold on
+hold on
 plot(0:100, H2_quotient, 'x')
 title('Binomial RV')
 xlabel('x')
 ylabel('pdf(x)')
-%line([RV2_mean RV2_mean],max(H2_quotient),'LineWidth', 2) %not working not
-%sure why
+line([RV2_mean RV2_mean],[0 max(H2_quotient)])
 
 figure 
+hold on
 plot(0:100, H3_quotient, 'x')
 title('Poisson RV')
 xlabel('x')
 ylabel('pdf(x)')
+line([RV3_mean RV3_mean],[0 max(H3_quotient)])
 
 %% Question 3) III
 H1_probability = 0;
